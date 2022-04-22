@@ -6,9 +6,11 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class EmailChips extends StatefulWidget {
   List<String> emails = [];
+  Color? backgroundcolor;
+  final VoidCallback press;
   TextEditingController editingController;
-  EmailChips({Key? key, required this.emails, required this.editingController})
-      : super(key: key);
+  EmailChips({ required this.press, required this.emails, required this.editingController,   this.backgroundcolor} )
+     ;
 
   @override
   State<EmailChips> createState() => _EmailChipsState();
@@ -24,7 +26,11 @@ class _EmailChipsState extends State<EmailChips> {
         children: [
           SizedBox(
               child: Center(
-            child: SizedBox(
+            child:
+ Padding(
+   padding:  EdgeInsets.symmetric(horizontal: 10.0),
+   child:
+            SizedBox(
               height: 40,
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -32,6 +38,7 @@ class _EmailChipsState extends State<EmailChips> {
                   ...widget.emails
                       .map(
                         (email) => Chip(
+
                           label: Text(email),
                           onDeleted: () => {
                             setState(() {
@@ -39,13 +46,14 @@ class _EmailChipsState extends State<EmailChips> {
                                   .removeWhere((element) => email == element);
                             })
                           },
+                        backgroundColor: widget.backgroundcolor,
                         ),
                       )
                       .toList(),
                 ],
               ),
             ),
-          )),
+          ))),
           SizedBox(
             height: 20,
           ),
@@ -75,14 +83,14 @@ class _EmailChipsState extends State<EmailChips> {
           ElevatedButton(
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.black)),
-              onPressed: () {},
+              onPressed: widget.press,
               child: Container(
                 height: 50,
                 width: 100,
                 color: Colors.black,
                 child: const Center(
                     child: Text(
-                  "Show Emails",
+                  "Get Emails",
                   style: TextStyle(color: Colors.white),
                 )),
               ))
