@@ -15,24 +15,33 @@ Flutter package chipemails provides you to building inputChips and show these ch
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+![alt text](assets/vidz.gif)
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+In your flutter project, add the dependency to your pubspec.yaml
 
 ```dart
-const like = 'sample';
+dependencies:
+  ...
+  chip_emails:
+```
+## Usage
+
+All you need is simple import library for this flutter package
+
+```dart
+import 'import 'package:chip_emails/chip_emails.dart;
 ```
 
-## Additional information
+```dart
+ EmailChips(
+              press: () {
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+              },
+              emails: email_list,
+              backgroundcolor: Colors.blue,
+              editingController: emailcontroller,
+            ),
+```
+

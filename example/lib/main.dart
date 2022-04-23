@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'EmailChips'),
     );
   }
 }
@@ -66,17 +66,17 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             EmailChips(
               press: () {
-
                 setState(() {
                   getemail_list = email_list;
                 });
-
               },
               emails: email_list,
               backgroundcolor: Colors.blue,
               editingController: emailcontroller,
             ),
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             Center(
               child: Container(
                 height: 100,
