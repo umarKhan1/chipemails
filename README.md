@@ -67,6 +67,6 @@ This package is maintained as a contribution to the global Flutter ecosystem. De
 ### Professional Profiles
 
 GitHub: [umarKhan1](https://github.com/umarKhan1)
-LinkedIn: [Muhammad Omar Khan](https://www.linkedin.com/in/muhammad-omar-khan-b85523171/)
+LinkedIn: [Muhammad Omar](https://www.linkedin.com/in/muhammad-omar-0335/)
 
 License: MIT
