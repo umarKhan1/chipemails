@@ -4,12 +4,20 @@ import '../parser.dart';
 
 /// Behaves like a standard [FormField], making it a robust developer tool.
 class EmailChipInput extends FormField<List<String>> {
+  /// Optional controller to manage the list of emails programmatically.
   final ChipEmailController? controller;
+
+  /// The visual decoration to show around the chip input.
   final InputDecoration decoration;
+
+  /// Callback when the list of emails changes.
   final void Function(List<String>)? onChanged;
+
+  /// List of characters that trigger the conversion of text into a chip.
+  /// Default is [' ', ',', ';'].
   final List<String> delimiters;
 
-  /// Custom style for the chips.
+  /// Custom style configuration for the email chips.
   final EmailChipStyle chipStyle;
 
   EmailChipInput({
@@ -303,11 +311,19 @@ class _CapsuleChip extends StatelessWidget {
 
 /// Configuration for [EmailChipInput] chips.
 class EmailChipStyle {
+  /// The background color of the chip when it is not selected.
   final Color? backgroundColor;
+
+  /// The background color of the chip when it is selected.
   final Color? selectedColor;
+
+  /// The color of the text and delete icon.
   final Color? textColor;
+
+  /// The border radius of the chip capsule.
   final double borderRadius;
 
+  /// Creates a style configuration for email chips.
   const EmailChipStyle({
     this.backgroundColor,
     this.selectedColor,
@@ -316,7 +332,9 @@ class EmailChipStyle {
   });
 }
 
+/// A controller for [EmailChipInput] to manage state externally.
 class ChipEmailController extends ValueNotifier<List<String>> {
+  /// Creates a controller with an optional list of initial emails.
   ChipEmailController({List<String>? initialEmails})
       : super(initialEmails ?? []);
 }

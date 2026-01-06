@@ -64,7 +64,7 @@ EmailChipInput(controller: controller);
 
 This package is maintained as a contribution to the global Flutter ecosystem. Developers are encouraged to submit pull requests and resolve issues through the official repository.
 
-### Professional Profiles
+### Author Profiles
 
 GitHub: [umarKhan1](https://github.com/umarKhan1)
 LinkedIn: [Muhammad Omar](https://www.linkedin.com/in/muhammad-omar-0335/)
