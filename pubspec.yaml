@@ -1,5 +1,5 @@
 name: chip_emails
-description: A new Flutter package project.
+description: A high-performance, professional email input widget for Flutter with intelligent chip management and batch parsing.
 version: 1.0.0
 homepage: https://github.com/umarKhan1/chipemails
 repository: https://github.com/umarKhan1/chipemails
